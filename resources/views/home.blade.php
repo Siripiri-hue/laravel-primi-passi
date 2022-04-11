@@ -9,5 +9,16 @@
 <body>
     <h1>Hello World!</h1>
     <h2>Benvenuta, {{ $name }}</h2>
+
+    @php 
+    $poems = ['L\'infinito', 'Spesso il male di vivere ho incontrato', 'La speranza']
+    @endphp
+
+    <h3>Letture</h3>
+    <ul>
+        @foreach ($poems as $poem)
+        <li>{{ $poem }}</li>
+        @endforeach
+    </ul>
 </body>
 </html>
